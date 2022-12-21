@@ -40,9 +40,7 @@
             <td>{{ $customer->limit_day }}</td>
             <td>
                 <form action="{{ route('customers.destroy',$customer->id) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('customers.show',$customer->id) }}">Show</a>
-    
+       
                     <a class="btn btn-primary" href="{{ route('customers.edit',$customer->id) }}">Edit</a>
    
                     @csrf

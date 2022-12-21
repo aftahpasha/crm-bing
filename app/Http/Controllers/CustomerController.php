@@ -42,9 +42,13 @@ class CustomerController extends Controller
         //     'name' => 'required',
         //     'email' => 'required',
         // ]);
-    
+        $now = strtotime($request->start_date); // or your date as well
+        $your_date = strtotime($request->end_date); 
+        $datediff = $now - $your_date;
+
+            
+        $request['limit_day'] = round($datediff / (60 * 60 * 24));
         Customer::create($request->all());
-     
         return redirect()->route('customers.index')
                         ->with('success','Customer created successfully.');
     }

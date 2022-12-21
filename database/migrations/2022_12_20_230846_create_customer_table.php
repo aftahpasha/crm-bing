@@ -20,6 +20,7 @@ class CreateCustomerTable extends Migration
             $table->string('deskripsi');
             $table->string('start_date');
             $table->string('end_date');
+            $table->string('picture');
             $table->integer('limit_day');            
             $table->timestamps();
         });

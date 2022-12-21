@@ -31,16 +31,41 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $customer->name }}" class="form-control" placeholder="Name">
+                    <strong>Nomor Kontrak:</strong>
+                    <input type="text" name="no_kontrak" value="{{ $customer->no_kontrak }}" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Email:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Email">{{ $customer->email }}</textarea>
+                    <strong>Nama PT:</strong>
+                    <input type="text" name="nama_pt" value="{{ $customer->nama_pt }}" class="form-control" placeholder="Name">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Deskripsi:</strong>
+                    <input type="text" name="deskripsi" value="{{ $customer->deskripsi }}" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Start Date:</strong>
+                    <input type="text" name="start_date" value="{{ $customer->start_date }}" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>End Date:</strong>
+                    <input type="text" name="end_date" value="{{ $customer->end_date }}" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Picture:</strong>
+                <input type="file" class="form-control" value="{{$customer->picture}}" name="picture">
+                </div>
+            </div>
+            
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

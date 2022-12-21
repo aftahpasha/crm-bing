@@ -48,18 +48,18 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Start Date:</strong>
-                <input type="text" class="form-control" name="start_date" placeholder="Start Date">
+                <input type="text" id="datetimepicker" style="background-color: white" class="form-control" name="start_date" placeholder="Start Date">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>End Date:</strong>
-                <input type="text" class="form-control" name="end_date" placeholder="End Date">
+                <input type="text" id="datetimepicker2" class="form-control" name="end_date" placeholder="End Date">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Limit Day:</strong>
+                <strong>Picture:</strong>
                 <input type="text" class="form-control" name="limit_day" placeholder="Limit Day">
             </div>
         </div>
