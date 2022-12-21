@@ -37,7 +37,7 @@
             <td>{{ $customer->deskripsi }}</td>
             <td>{{ $customer->start_date }}</td>
             <td>{{ $customer->end_date }}</td>
-            <td>{{ $customer->limit_day }}</td>
+            <td>{{ $customer->limit_day }} Days</td>
             <td>
                 <form action="{{ route('customers.destroy',$customer->id) }}" method="POST">
        
