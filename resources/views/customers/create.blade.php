@@ -60,7 +60,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Picture:</strong>
-                <input type="text" class="form-control" name="limit_day" placeholder="Limit Day">
+                <input type="file" class="form-control" name="picture">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
