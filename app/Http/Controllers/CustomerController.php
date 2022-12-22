@@ -15,8 +15,10 @@ class CustomerController extends Controller
     public function index()
     {
         $customers = Customer::latest()->paginate(5);
-    
-        return view('customers.index',compact('customers'))
+        $due_contract_30 = Customer::where('limit_day', '-30')->get()->all();
+        $due_contract_60 = Customer::where('limit_day', '-60')->get()->all();
+        $due_contract_15 = Customer::where('limit_day', '-15')->get()->all();
+        return view('customers.index',compact('customers', 'due_contract_30', 'due_contract_60', 'due_contract_15'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -88,7 +90,10 @@ class CustomerController extends Controller
         //     'name' => 'required',
         //     'email' => 'required',
         // ]);
-
+        $now = strtotime($request->start_date); // or your date as well
+        $your_date = strtotime($request->end_date); 
+        $datediff = $now - $your_date;
+        $request['limit_day'] = round($datediff / (60 * 60 * 24));
         $customer->update($request->all());
     
         return redirect()->route('customers.index')

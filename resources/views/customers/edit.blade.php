@@ -50,22 +50,16 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Start Date:</strong>
-                    <input type="text" name="start_date" value="{{ $customer->start_date }}" class="form-control" placeholder="Name">
+                    <input type="text" id="datetimepicker" value="{{$customer->start_date}}" style="background-color: white" class="form-control" name="start_date" placeholder="Start Date">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>End Date:</strong>
-                    <input type="text" name="end_date" value="{{ $customer->end_date }}" class="form-control" placeholder="Name">
+                    <input type="text" id="datetimepicker2" value="{{$customer->end_date}}" class="form-control" name="end_date" placeholder="End Date">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Picture:</strong>
-                <input type="file" class="form-control" value="{{$customer->picture}}" name="picture">
-                </div>
-            </div>
-            
+        
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

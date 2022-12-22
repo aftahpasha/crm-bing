@@ -57,12 +57,7 @@
                 <input type="text" id="datetimepicker2" class="form-control" name="end_date" placeholder="End Date">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Picture:</strong>
-                <input type="file" class="form-control" name="picture">
-            </div>
-        </div>
+        
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>

@@ -6,9 +6,6 @@
             <div class="pull-left">
                 <h2>Sistem Aplikasi Pencatatan Kontrak</h2>
             </div>
-            <div class="pull-right mb-3">
-                <a class="btn btn-success" href="{{ route('customers.create') }}"> Create New Customer</a>
-            </div>
         </div>
     </div>
    
@@ -17,6 +14,30 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+    @if ($due_contract_30)
+        <div class="alert alert-warning ">
+            <strong>Kontrak Dengan PT Berikut Akan berakhir dalam 1 Bulan:</strong>
+            @foreach ($due_contract_30 as $dt30)
+            <p>- {{ $dt30->nama_pt }} | {{ $dt30->no_kontrak }}</p>
+            @endforeach
+        </div>
+    @endif
+    @if ($due_contract_60)
+    <div class="alert alert-warning ">
+        <strong>Kontrak Dengan PT Berikut Akan berakhir dalam 2 Bulan:</strong>
+        @foreach ($due_contract_60 as $dt60)
+        <p>- {{ $dt60->nama_pt }} | {{ $dt60->no_kontrak }}</p>
+        @endforeach
+    </div>
+@endif
+@if ($due_contract_15)
+<div class="alert alert-warning ">
+    <strong>Kontrak Dengan PT Berikut Akan berakhir dalam 15 hari:</strong>
+    @foreach ($due_contract_15 as $dt15)
+    <p>- {{ $dt15->nama_pt }} | {{ $dt15->no_kontrak }}</p>
+    @endforeach
+</div>
+@endif
    
     <table class="table table-bordered">
         <tr>
@@ -37,7 +58,7 @@
             <td>{{ $customer->deskripsi }}</td>
             <td>{{ $customer->start_date }}</td>
             <td>{{ $customer->end_date }}</td>
-            <td>{{ $customer->limit_day }} Days</td>
+            <td>{{ $customer->limit_day }} Hari</td>
             <td>
                 <form action="{{ route('customers.destroy',$customer->id) }}" method="POST">
        
@@ -47,6 +68,8 @@
                     @method('DELETE')
       
                     <button type="submit" class="btn btn-danger">Delete</button>
+                        <a class="btn btn-success" href="{{ route('customers.create') }}"> Create</a>
+
                 </form>
             </td>
         </tr>
